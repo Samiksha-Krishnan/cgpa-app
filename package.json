@@ -1,0 +1,12 @@
+{
+  "name": "cgpa-calculator",
+  "version": "1.0.0",
+  "description": "CGPA Calculator with an Express backend that mirrors the original C++ grading logic.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

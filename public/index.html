@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CGPA Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo-section">
+            <div class="logo">Σ</div>
+
+            <div>
+                <h2>CGPA Calculator</h2>
+                <p>Academic Performance Tracker</p>
+            </div>
+        </div>
+
+        <button id="resetBtn" class="reset-btn">
+            Reset
+        </button>
+
+    </nav>
+
+
+    <!-- Main Container -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="tag">
+                    STUDENT TOOL
+                </span>
+
+                <h1>
+                    Calculate your
+                    <span>GPA & CGPA</span>
+                    with ease.
+                </h1>
+
+                <p>
+                    Enter your subjects, marks and credits to
+                    calculate your semester GPA and overall CGPA.
+                </p>
+
+            </div>
+
+
+            <div class="hero-score">
+
+                <p>Current GPA</p>
+
+                <h2 id="heroGpa">
+                    0.00
+                </h2>
+
+                <span>/ 10</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Main Grid -->
+        <section class="calculator-grid">
+
+
+            <!-- Left Card -->
+            <div class="card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h2>Current Semester</h2>
+
+                        <p>
+                            Add your subjects, marks and credits.
+                        </p>
+                    </div>
+
+                    <span id="courseCount">
+                        0 Courses
+                    </span>
+
+                </div>
+
+
+                <!-- Courses -->
+                <div id="courses">
+
+                    <!-- Course will be added using JavaScript -->
+
+                </div>
+
+
+                <!-- Add Course -->
+                <button id="addCourseBtn" class="add-btn">
+                    + Add Course
+                </button>
+
+
+                <!-- Previous Semester -->
+                <div class="divider"></div>
+
+                <div class="card-header">
+
+                    <div>
+                        <h2>Previous Semesters</h2>
+
+                        <p>
+                            Add previous GPA and credits.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div id="semesters">
+
+                    <!-- Previous semesters added here -->
+
+                </div>
+
+
+                <button id="addSemesterBtn" class="secondary-btn">
+                    + Add Previous Semester
+                </button>
+
+
+                <!-- Calculate -->
+                <button id="calculateBtn" class="calculate-btn">
+                    Calculate GPA & CGPA
+                </button>
+
+                <p id="formError" class="form-error" hidden></p>
+
+            </div>
+
+
+            <!-- Right Card -->
+            <div class="card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h2>Your Result</h2>
+
+                        <p>
+                            Academic performance summary.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- GPA / CGPA -->
+                <div class="score-grid">
+
+                    <div class="score-card">
+
+                        <p>Semester GPA</p>
+
+                        <h2 id="gpa">
+                            0.00
+                        </h2>
+
+                    </div>
+
+
+                    <div class="score-card">
+
+                        <p>Overall CGPA</p>
+
+                        <h2 id="cgpa">
+                            0.00
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Statistics -->
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+
+                        <p>Total Credits</p>
+
+                        <h3 id="totalCredits">
+                            0
+                        </h3>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <p>Total Grade Points</p>
+
+                        <h3 id="totalGradePoints">
+                            0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Result Table -->
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Subject</th>
+                                <th>Marks</th>
+                                <th>Credits</th>
+                                <th>Grade Point</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="resultTable">
+
+                            <tr>
+                                <td colspan="4" class="empty">
+                                    Add courses to see your result.
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Grade Scale -->
+        <section class="card grade-section">
+
+            <div>
+
+                <h2>Grade Point Scale</h2>
+
+                <p>
+                    Based on your C++ calculateGradePoint() function.
+                </p>
+
+            </div>
+
+
+            <div class="grade-list">
+
+                <div>
+                    90 - 100
+                    <strong>10</strong>
+                </div>
+
+                <div>
+                    80 - 89
+                    <strong>9</strong>
+                </div>
+
+                <div>
+                    70 - 79
+                    <strong>8</strong>
+                </div>
+
+                <div>
+                    60 - 69
+                    <strong>7</strong>
+                </div>
+
+                <div>
+                    50 - 59
+                    <strong>6</strong>
+                </div>
+
+                <div>
+                    40 - 49
+                    <strong>5</strong>
+                </div>
+
+                <div>
+                    0 - 39
+                    <strong>0</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        CGPA Calculator © 2026
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
